@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+{% include header.html %}
+
+<div class="editionsWrapper">
+  <div></div>
+  <div>
+  {% for project in site.editions %}
+  <a href="{{ project.url }}">
+    <div class="editionsTitleGrid">
+      <div><h6>{{ project.isbn }}</h6></div>
+      <div><h6>{{ project.title }}</h6></div>
+      <div><h6>{{ project.author }}</h6></div>
+      <div><h6>{{ project.pages }}</h6></div>
+      <div><h6>{{ project.size }}</h6></div>
+      <div><h6>{{ project.year }}</h6></div>
+    </div>
+  </a>
+  {% endfor %}
+  </div>
+  <div></div>
+</div>
